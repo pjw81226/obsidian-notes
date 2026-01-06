@@ -11,17 +11,14 @@
             "id": "45e2999a5c237bda",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "java/JAVA Canvas.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "binance-rise-alert/2026-01-06 작업, 커밋 상세 정리 (binance-rise-alert).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "JAVA Canvas"
+              "icon": "lucide-file",
+              "title": "2026-01-06 작업, 커밋 상세 정리 (binance-rise-alert)"
             }
           }
         ]
@@ -184,14 +181,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "114cce64e4853238",
+  "active": "45e2999a5c237bda",
   "lastOpenFiles": [
+    "java/JAVA Canvas.canvas",
+    "binance-rise-alert/2026-01-06 작업, 커밋 상세 정리 (binance-rise-alert).md",
+    "binance-rise-alert",
     "java/톰캣",
     "java/GC",
     "java/자료구조",
     "java/동시성처리",
     "README.md",
-    "java/JAVA Canvas.canvas",
     "java"
   ]
 }
