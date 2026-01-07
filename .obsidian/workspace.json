@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "808981090fe03852",
+        "id": "137f4ade136c1a3a",
         "type": "tabs",
         "children": [
           {
-            "id": "45e2999a5c237bda",
+            "id": "73cfd09b35533536",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "binance-rise-alert/2026-01-06 작업, 커밋 상세 정리 (binance-rise-alert).md",
+                "file": "java/GC/GC-알고리즘/CMS-GC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-01-06 작업, 커밋 상세 정리 (binance-rise-alert)"
+              "title": "CMS-GC"
             }
           }
         ]
@@ -178,19 +178,49 @@
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
       "bases:새 베이스 생성하기": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "45e2999a5c237bda",
+  "active": "114cce64e4853238",
   "lastOpenFiles": [
-    "java/JAVA Canvas.canvas",
-    "binance-rise-alert/2026-01-06 작업, 커밋 상세 정리 (binance-rise-alert).md",
-    "binance-rise-alert",
-    "java/톰캣",
-    "java/GC",
-    "java/자료구조",
-    "java/동시성처리",
-    "README.md",
-    "java"
+    "java/GC/GC-모니터링.md",
+    "java/GC/GC.md",
+    "java/JVM/JVM.md",
+    "java/JAVA.md",
+    "java/GC/GC-알고리즘/ZGC.md",
+    "java/GC/GC-알고리즘/G1GC.md",
+    "java/GC/GC-알고리즘/CMS-GC.md",
+    "java/GC/GC-알고리즘/Parallel-GC.md",
+    "java/GC/GC-알고리즘/Serial-GC.md",
+    "java/GC/GC-튜닝.md",
+    "java/GC/Stop-The-World.md",
+    "java/GC/메모리-구조.md",
+    "java/GC/GC-알고리즘",
+    "java/JVM/JVM-관측-도구.md",
+    "java/JVM/JVM-스레드-모델.md",
+    "java/JVM/JVM-클래스-로딩.md",
+    "java/JVM/JVM-메모리-구조.md",
+    "java/GC/GC-레퍼런스.md",
+    "java/GC/GC-실무-사례.md",
+    "java/GC/GC-장애-대응-플레이북.md",
+    "java/GC/GC-도구.md",
+    "java/GC/GC-로그-분석.md",
+    "java/GC/GC-관측-지표.md",
+    "java/GC/GC-튜닝-체크리스트.md",
+    "java/GC/GC-ZGC.md",
+    "java/GC/GC-G1.md",
+    "java/GC/GC-수집기-종류.md",
+    "java/GC/GC - 04 알고리즘(Mark/Sweep",
+    "java/GC/GC - 04 알고리즘(Mark",
+    "java/GC/GC - 03 GC 동작(STW",
+    "java/GC/GC - 02 메모리 구조(Heap",
+    "java/GC/01-개념/GC - JVM 힙",
+    "java/GC/99-레퍼런스/레퍼런스 - 글",
+    "java/GC/99-레퍼런스",
+    "java/GC/05-실험",
+    "java/GC/04-도구",
+    "JAVA Canvas.canvas",
+    "newsbara/Trouble Shooting.canvas"
   ]
 }
