@@ -13,30 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "java/GC/메모리-구조.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "메모리-구조"
+              "title": "README"
             }
           }
         ]
       },
       {
-        "id": "9fed0f1aafde077c",
+        "id": "0c805614d96deda0",
         "type": "tabs",
         "children": [
           {
-            "id": "947894bd45a9c3b7",
+            "id": "10add4ced07e36f4",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "_assets/heap_structure.png"
-              },
-              "icon": "lucide-image",
-              "title": "heap_structure"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
         ]
@@ -200,19 +198,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "947894bd45a9c3b7",
+  "active": "10add4ced07e36f4",
   "lastOpenFiles": [
-    "_assets",
-    "java/GC/메모리-구조.md",
-    "java/GC/GC.md",
+    "README.md",
     "java/GC/Stop-The-World (STW).md",
+    "java/GC/GC.md",
+    "java/GC/메모리-구조.md",
+    "java/GC/GC-알고리즘/CMS-GC.md",
+    "_assets/heap_structure.png",
+    "_assets",
     "Pasted image 20260108021804.png.md",
     "java/GC/GC-튜닝.md",
-    "_assets/heap_structure.png",
     "Pasted image 20260108015906.png",
     "Pasted image 20260108021804.png",
     "Pasted image 20260108015848.png",
-    "java/GC/GC-알고리즘/CMS-GC.md",
     "About Obsidian.md",
     "binance-rise-alert/2026-01-06 작업, 커밋 상세 정리.md",
     "java/GC/GC-모니터링.md",
@@ -232,7 +231,6 @@
     "java/GC/GC-장애-대응-플레이북.md",
     "java/GC/GC-도구.md",
     "java/GC/GC-로그-분석.md",
-    "java/GC/GC-관측-지표.md",
     "java/GC/GC - 04 알고리즘(Mark/Sweep",
     "java/GC/GC - 04 알고리즘(Mark",
     "java/GC/GC - 03 GC 동작(STW",
@@ -241,7 +239,6 @@
     "java/GC/99-레퍼런스/레퍼런스 - 글",
     "java/GC/99-레퍼런스",
     "java/GC/05-실험",
-    "java/GC/04-도구",
     "JAVA Canvas.canvas",
     "newsbara/Trouble Shooting.canvas"
   ]
