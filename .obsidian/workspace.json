@@ -13,12 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "java/GC/GC-알고리즘/CMS-GC.md",
+                "file": "java/GC/GC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CMS-GC"
+              "title": "GC"
+            }
+          }
+        ]
+      },
+      {
+        "id": "9fed0f1aafde077c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "947894bd45a9c3b7",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
         ]
@@ -78,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "8490d3470bf10c5a",
@@ -182,20 +199,26 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "114cce64e4853238",
+  "active": "73cfd09b35533536",
   "lastOpenFiles": [
-    "java/GC/GC-모니터링.md",
     "java/GC/GC.md",
+    "java/GC/메모리-구조.md",
+    "java/GC/Stop-The-World (STW).md",
+    "Pasted image 20260108022021.png",
+    "Pasted image 20260108021804.png",
+    "Pasted image 20260108015906.png",
+    "Pasted image 20260108015848.png",
+    "java/GC/GC-알고리즘/CMS-GC.md",
+    "About Obsidian.md",
+    "binance-rise-alert/2026-01-06 작업, 커밋 상세 정리.md",
+    "java/GC/GC-튜닝.md",
+    "java/GC/GC-모니터링.md",
     "java/JVM/JVM.md",
     "java/JAVA.md",
     "java/GC/GC-알고리즘/ZGC.md",
     "java/GC/GC-알고리즘/G1GC.md",
-    "java/GC/GC-알고리즘/CMS-GC.md",
     "java/GC/GC-알고리즘/Parallel-GC.md",
     "java/GC/GC-알고리즘/Serial-GC.md",
-    "java/GC/GC-튜닝.md",
-    "java/GC/Stop-The-World.md",
-    "java/GC/메모리-구조.md",
     "java/GC/GC-알고리즘",
     "java/JVM/JVM-관측-도구.md",
     "java/JVM/JVM-스레드-모델.md",
@@ -208,9 +231,6 @@
     "java/GC/GC-로그-분석.md",
     "java/GC/GC-관측-지표.md",
     "java/GC/GC-튜닝-체크리스트.md",
-    "java/GC/GC-ZGC.md",
-    "java/GC/GC-G1.md",
-    "java/GC/GC-수집기-종류.md",
     "java/GC/GC - 04 알고리즘(Mark/Sweep",
     "java/GC/GC - 04 알고리즘(Mark",
     "java/GC/GC - 03 GC 동작(STW",
