@@ -51,4 +51,42 @@ base entity는 createdAt, updatedAt
 
 - user_subscription_keyword (유저가 저장한 키워드)
 
-Redis
+
+# Redis
+### 뉴스 리스트
+- `nl:{sort}:{qk}` (qk = 키워드를 **정규화한 뒤 해시로 만든 값**)
+	- 예: `nl:sim:9f2a...` / `nl:date:9f2a...`
+	- 값: 기사 배열(JSON) 또는 msgpack
+	- TTL:
+	    - sim: 30~60분
+	    - date: 5~15분
+	- 저장 개수: 키워드당 top 20~50개 정도
+
+### 썸네일 캐시 (핫) 키
+- `th:{urlHash}`
+	- - 예: `th:ab12cd...`
+	- 값(권장): 작은 JSON
+	    - OK: `{ "s":"OK", "u":"https://...", "ts":170... }`
+	    - FAIL: `{ "s":"FAIL", "ra":170... }` (retryAfter epoch)
+	- TTL:
+	    - OK: 1~7일(메모리 아끼면 1~3일)
+	    - FAIL: 1~6시간
+
+### 락(스탬피드 방지) 키
+- 리스트 갱신 락 : `lk:nl:{sort}:{qk}`
+	- TTL: 10~30초
+	- 용도: 캐시 미스 시 **1명만 네이버 API 호출**하게
+- 썸네일 생성 락 : `lk:th:{urlHash}`
+	- TTL: 30~120초
+	- 용도: 여러 클라이언트가 동시에 `/thumbs`를 때릴 때 **OG 파싱 중복 방지**
+
+### 도메인 → 언론사 매핑 캐시(선택)
+- `pub:host:{host}`
+	- 예: `pub:host:sedaily.com -> "서울경제"`
+	- TTL: 길게(30~180일) 또는 영구
+	- 값: `{name, logoUrl, updatedAt}`
+
+### “유저 키워드 목록” 캐시(선택)
+- `u:{userId}:kw`
+	- 값: 유저 키워드 배열(JSON)
+	- TTL: 1~6시간(또는 이벤트 기반 무효화)
