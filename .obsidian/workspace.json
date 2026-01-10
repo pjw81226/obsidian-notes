@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "newsbara/Database.md",
+                "file": "newsbara/DB/Database Structure.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Database"
+              "title": "Database Structure"
             }
           }
         ]
@@ -154,12 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "newsbara/DB/Database Structure.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "개요"
+              "title": "Database Structure 의 개요"
             }
           },
           {
@@ -173,12 +174,11 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,14 +195,20 @@
   },
   "active": "10add4ced07e36f4",
   "lastOpenFiles": [
-    "newsbara/문제점/썸네일 요청 처리 흐름.md",
+    "newsbara/DB/Database.md",
+    "newsbara/DB/Database Structure.md",
     "newsbara/문제점/키워드 기반 기사 검색에서의 문제점.md",
-    "newsbara/Database.md",
+    "newsbara/문제점/썸네일 요청 처리 흐름.md",
+    "newsbara/키워드 뉴스 썸네일 처리 Flow.md",
+    "newsbara/키워드기반 뉴스 가져오기.md",
+    "newsbara/키워드기반 뉴스",
+    "About Obsidian.md",
+    "newsbara/DB/DataFlow.md",
+    "newsbara/DB",
     "_assets/heap_structure.png",
     "binance-rise-alert/2026-01-06 작업, 커밋 상세 정리.md",
     "binance-rise-alert/binance-rise-alert.md",
     "binance-rise-alert/트러블슈팅.md",
-    "About Obsidian.md",
     "newsbara/문제점",
     "binance-rise-alert/Todo.md",
     "binance-rise-alert/Momentum 알고리즘.md",
@@ -223,18 +229,12 @@
     "java/JAVA.md",
     "java/GC/GC-알고리즘/ZGC.md",
     "java/GC/GC-알고리즘/G1GC.md",
-    "java/GC/GC-알고리즘/Parallel-GC.md",
-    "java/GC/GC-알고리즘/Serial-GC.md",
     "java/GC/GC-알고리즘",
-    "java/JVM/JVM-관측-도구.md",
-    "java/JVM/JVM-스레드-모델.md",
     "java/GC/GC - 04 알고리즘(Mark/Sweep",
     "java/GC/GC - 04 알고리즘(Mark",
     "java/GC/GC - 03 GC 동작(STW",
     "java/GC/GC - 02 메모리 구조(Heap",
     "java/GC/01-개념/GC - JVM 힙",
-    "java/GC/99-레퍼런스/레퍼런스 - 글",
-    "java/GC/99-레퍼런스",
     "JAVA Canvas.canvas",
     "newsbara/Trouble Shooting.canvas"
   ]

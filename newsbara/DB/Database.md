@@ -6,7 +6,7 @@
 6. 사용자는 기사를 스크랩 할 수 있다.
 
 
-디비에 저장하는 모든 시간은 UTC 기준으로
+디비에 저장하는 createdAt updatedAt모든 시간은 UTC 기준으로
 화면에 보여줄 때는 사용자의 타임존을 기준으로 변환해서 보여줘야한다.
 
 article time
@@ -36,10 +36,61 @@ base entity는 createdAt, updatedAt
 	- `best_streak` : 최고 기록
 
 - daily_news
+	``` sql
+	CREATE TABLE `daily_news` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'PK',
+  `title` varchar(500) NOT NULL COMMENT '기사 제목',
+  `url` varchar(2083) NOT NULL COMMENT '기사 원문 링크 (길 수 있음)',
+  `url_hash` varchar(64) NOT NULL COMMENT 'URL 해시값 (중복 체크용)',
+  `image_url` varchar(2083) DEFAULT NULL COMMENT 'OG 태그로 긁어온 썸네일 주소',
+  `press` varchar(100) DEFAULT NULL COMMENT '언론사 이름 (예: 조선일보)',
+  `pub_date` datetime DEFAULT NULL COMMENT '기사 발행일 (RSS pubDate)',
+  `category` varchar(50) DEFAULT NULL COMMENT '뉴스 카테고리 (POLITICS, ECONOMY, IT ...)',
+  `is_top` tinyint(1) DEFAULT '0' COMMENT '주요 뉴스 여부',
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '수집된 시간',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_url_hash` (`url_hash`)
+) ENGINE=InnoDB AUTO_INCREMENT=1830 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='오늘의 주요 뉴스 캐싱'
+
+
+	```
 
 - article_sources
+	```sql
+	CREATE TABLE `article_sources` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `url` varchar(255) NOT NULL,
+  `source_type` enum('COMPANY','INDIVIDUAL') DEFAULT NULL,
+  `last_crawled_at` datetime DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+	```
 
 - articles
+	```sql
+	CREATE TABLE `articles` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `title` text,
+  `url` text NOT NULL,
+  `url_hash` varchar(64) DEFAULT NULL,
+  `thumbnail_url` text,
+  `published_at` datetime DEFAULT NULL,
+  `description` text,
+  `author` varchar(100) DEFAULT NULL,
+  `source_name` varchar(50) DEFAULT NULL,
+  `main_category` varchar(50) NOT NULL,
+  `sub_category` varchar(50) NOT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `url_hash` (`url_hash`),
+  KEY `idx_main_category` (`main_category`),
+  KEY `idx_sub_category` (`sub_category`)
+) ENGINE=InnoDB AUTO_INCREMENT=7128 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+	```
 
 - user_scrap
 
