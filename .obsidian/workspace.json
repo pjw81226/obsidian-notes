@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0c805614d96deda0",
+        "id": "5aac97ef9a27ea76",
         "type": "tabs",
         "children": [
           {
-            "id": "10add4ced07e36f4",
+            "id": "d1cd2ef993ae8710",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "newsbara/DB/Database Structure.md",
+                "file": "newsbara/API.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Database Structure"
+              "title": "API"
             }
           }
         ]
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "newsbara/DB/Database Structure.md",
+                "file": "newsbara/API.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Database Structure 의 개요"
+              "title": "API 의 개요"
             }
           },
           {
@@ -193,42 +193,42 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "10add4ced07e36f4",
+  "active": "d1cd2ef993ae8710",
   "lastOpenFiles": [
-    "newsbara/DB/Database.md",
+    "newsbara/DB/DB 설명.md",
+    "newsbara/API.md",
+    "newsbara/API 명세서.md",
+    "무제.md",
+    "About Obsidian.md",
+    "README.md",
+    "newsbara/DB/Database 설계 생각 Flow.md",
     "newsbara/DB/Database Structure.md",
+    "newsbara/키워드 뉴스 썸네일 처리 Flow.md",
     "newsbara/문제점/키워드 기반 기사 검색에서의 문제점.md",
     "newsbara/문제점/썸네일 요청 처리 흐름.md",
-    "newsbara/키워드 뉴스 썸네일 처리 Flow.md",
-    "newsbara/키워드기반 뉴스 가져오기.md",
-    "newsbara/키워드기반 뉴스",
-    "About Obsidian.md",
-    "newsbara/DB/DataFlow.md",
-    "newsbara/DB",
-    "_assets/heap_structure.png",
-    "binance-rise-alert/2026-01-06 작업, 커밋 상세 정리.md",
-    "binance-rise-alert/binance-rise-alert.md",
-    "binance-rise-alert/트러블슈팅.md",
-    "newsbara/문제점",
-    "binance-rise-alert/Todo.md",
-    "binance-rise-alert/Momentum 알고리즘.md",
-    "binance-rise-alert/Kafka 토픽 컷오버(Cutover)로 심볼 키 기반 파티션 확장 문제 해결.md",
-    "README.md",
+    "newsbara/문제점 3/썸네일 요청 처리 흐름.md",
+    "java/GC/GC-알고리즘/Serial-GC.md",
     "java/GC/Stop-The-World (STW).md",
     "java/GC/GC.md",
-    "java/GC/메모리-구조.md",
-    "java/GC/GC-알고리즘/CMS-GC.md",
-    "_assets",
-    "Pasted image 20260108021804.png.md",
+    "java/GC/GC-모니터링.md",
     "java/GC/GC-튜닝.md",
+    "java/GC/메모리-구조.md",
+    "_assets/heap_structure.png",
+    "java/GC/GC-알고리즘/ZGC.md",
+    "java/GC/GC-알고리즘/Parallel-GC.md",
+    "java/GC/GC-알고리즘/CMS-GC.md",
+    "java/동시성처리/동시성처리.md",
+    "newsbara/키워드기반 뉴스 가져오기.md",
+    "newsbara/키워드기반 뉴스",
+    "newsbara/DB/DataFlow.md",
+    "newsbara/DB",
+    "binance-rise-alert/2026-01-06 작업, 커밋 상세 정리.md",
+    "binance-rise-alert/binance-rise-alert.md",
+    "newsbara/문제점",
+    "_assets",
     "Pasted image 20260108015906.png",
     "Pasted image 20260108021804.png",
     "Pasted image 20260108015848.png",
-    "java/GC/GC-모니터링.md",
-    "java/JVM/JVM.md",
-    "java/JAVA.md",
-    "java/GC/GC-알고리즘/ZGC.md",
-    "java/GC/GC-알고리즘/G1GC.md",
     "java/GC/GC-알고리즘",
     "java/GC/GC - 04 알고리즘(Mark/Sweep",
     "java/GC/GC - 04 알고리즘(Mark",
