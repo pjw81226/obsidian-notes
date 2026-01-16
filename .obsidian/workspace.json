@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "5aac97ef9a27ea76",
+        "id": "cc6aa9125269a750",
         "type": "tabs",
         "children": [
           {
-            "id": "d1cd2ef993ae8710",
+            "id": "0e6b7b2d22247aaf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "java/GC/GC.md",
+                "file": "정처기/1과목.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GC"
-            }
-          },
-          {
-            "id": "7fede933d991a39f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "java/GC/GC.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GC"
+              "title": "1과목"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "8490d3470bf10c5a",
@@ -169,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "java/GC/GC.md",
+                "file": "정처기/1과목.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "GC 의 개요"
+              "title": "1과목 의 개요"
             }
           },
           {
@@ -208,48 +194,53 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7fede933d991a39f",
+  "active": "0e6b7b2d22247aaf",
   "lastOpenFiles": [
-    "java/GC/GC-알고리즘/ZGC.md",
+    "무제.md",
+    "정처기/1과목.md",
+    "_assets/Pasted image 20260115195745.png",
+    "_assets/Pasted image 20260115195717.png",
+    "_assets/Pasted image 20260115193520.png",
+    "_assets/Pasted image 20260115193452.png",
+    "_assets/Pasted image 20260115193417.png",
+    "_assets/Pasted image 20260115193335.png",
+    "_assets/Pasted image 20260115193242.png",
+    "_assets/Pasted image 20260115193141.png",
+    "_assets/Pasted image 20260115192123.png",
+    "_assets/Pasted image 20260115192119.png",
+    "OPic/Word Note.md",
+    "정처기",
+    "OPic/filers.md",
+    "OPic",
     "java/GC/GC.md",
-    "java/GC/메모리-구조.md",
-    "java/GC/GC-모니터링.md",
+    "newsbara/문제점/키워드 기반 기사 검색에서의 문제점.md",
+    "newsbara/키워드 뉴스 썸네일 처리 Flow.md",
+    "newsbara/newsbara.md",
+    "newsbara/API 명세서.md",
+    "newsbara/DB/DB 설명.md",
+    "newsbara/DB/Database Structure.md",
+    "About Obsidian.md",
+    "README.md",
+    "java/JVM/JVM.md",
+    "java/JAVA.md",
     "java/GC/GC-알고리즘/G1GC.md",
+    "java/GC/GC-알고리즘/ZGC.md",
+    "java/GC/Stop-The-World (STW).md",
+    "java/GC/메모리-구조.md",
+    "java/자료구조/자료구조.md",
+    "java/GC/GC-모니터링.md",
     "java/GC/GC-알고리즘/CMS-GC.md",
     "java/GC/GC-알고리즘/Serial-GC.md",
     "java/GC/GC-알고리즘/Parallel-GC.md",
     "java/GC/GC-튜닝.md",
-    "java/동시성처리/동시성처리.md",
-    "newsbara/API.md",
-    "newsbara/DB/DB 설명.md",
-    "newsbara/API 명세서.md",
-    "무제.md",
-    "About Obsidian.md",
-    "README.md",
-    "newsbara/DB/Database 설계 생각 Flow.md",
-    "newsbara/DB/Database Structure.md",
-    "newsbara/키워드 뉴스 썸네일 처리 Flow.md",
-    "newsbara/문제점/키워드 기반 기사 검색에서의 문제점.md",
-    "newsbara/문제점/썸네일 요청 처리 흐름.md",
-    "newsbara/문제점 3/썸네일 요청 처리 흐름.md",
-    "java/GC/Stop-The-World (STW).md",
-    "_assets/heap_structure.png",
-    "newsbara/키워드기반 뉴스 가져오기.md",
     "newsbara/키워드기반 뉴스",
-    "newsbara/DB/DataFlow.md",
     "newsbara/DB",
-    "binance-rise-alert/2026-01-06 작업, 커밋 상세 정리.md",
     "newsbara/문제점",
     "_assets",
-    "Pasted image 20260108015906.png",
-    "Pasted image 20260108021804.png",
-    "Pasted image 20260108015848.png",
     "java/GC/GC-알고리즘",
     "java/GC/GC - 04 알고리즘(Mark/Sweep",
     "java/GC/GC - 04 알고리즘(Mark",
     "java/GC/GC - 03 GC 동작(STW",
-    "java/GC/GC - 02 메모리 구조(Heap",
-    "java/GC/01-개념/GC - JVM 힙",
     "JAVA Canvas.canvas",
     "newsbara/Trouble Shooting.canvas"
   ]

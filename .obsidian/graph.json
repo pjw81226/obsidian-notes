@@ -22,7 +22,7 @@
       }
     },
     {
-      "query": "",
+      "query": "path:newsbara  ",
       "color": {
         "a": 1,
         "rgb": 11392604
@@ -39,6 +39,6 @@
   "repelStrength": 20,
   "linkStrength": 0.9669189453125,
   "linkDistance": 384,
-  "scale": 0.6970242102761011,
+  "scale": 0.5278590250771592,
   "close": true
 }
