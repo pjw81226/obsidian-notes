@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "newsbara/API 명세서.md",
-                "mode": "preview",
+                "file": "정처기/시나공1회.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "API 명세서"
+              "title": "시나공1회"
             }
           }
         ]
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "newsbara/API 명세서.md",
+                "file": "정처기/시나공1회.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "API 명세서 의 개요"
+              "title": "시나공1회 의 개요"
             }
           },
           {
@@ -195,21 +195,22 @@
   },
   "active": "0e6b7b2d22247aaf",
   "lastOpenFiles": [
-    "newsbara/키워드 뉴스 썸네일 처리 Flow.md",
-    "newsbara/newsbara.md",
     "정처기/시나공1회.md",
     "정처기/1과목.md",
+    "newsbara/API 명세서.md",
+    "_assets/Pasted image 20260117145800.png",
+    "_assets/Pasted image 20260117145217.png",
+    "_assets/Pasted image 20260117145110.png",
+    "newsbara/키워드 뉴스 썸네일 처리 Flow.md",
+    "newsbara/newsbara.md",
     "About Obsidian.md",
     "README.md",
     "_assets/Pasted image 20260117153100.png",
     "_assets/Pasted image 20260117152517.png",
     "_assets/Pasted image 20260117152500.png",
     "_assets/Pasted image 20260117151823.png",
-    "_assets/Pasted image 20260117145800.png",
     "_assets/Pasted image 20260117145234.png",
-    "_assets/Pasted image 20260117145217.png",
     "_assets/Pasted image 20260117145133.png",
-    "_assets/Pasted image 20260117145110.png",
     "_assets/Pasted image 20260117145041.png",
     "무제.md",
     "OPic/Word Note.md",
@@ -218,7 +219,6 @@
     "OPic",
     "java/GC/GC.md",
     "newsbara/문제점/키워드 기반 기사 검색에서의 문제점.md",
-    "newsbara/API 명세서.md",
     "newsbara/DB/DB 설명.md",
     "newsbara/DB/Database Structure.md",
     "java/JVM/JVM.md",
