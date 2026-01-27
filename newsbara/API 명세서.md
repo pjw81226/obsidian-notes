@@ -88,19 +88,25 @@ Authorization: Bearer {access_token}
 
 ```
 1. 클라이언트 → OAuth 로그인 시작
-   - 웹: GET /oauth2/authorize/{provider}?state=web
-   - 앱: GET /oauth2/authorize/{provider}?state=android|ios
+   - 웹: GET /oauth2/authorization/{provider}
+   - 앱: GET /oauth2/authorization/{provider}?state=android|ios
 
 2. OAuth 제공자 → 사용자 인증 → 콜백
 
 3. 백엔드 → JWT 생성 → Redis 임시 저장 (5분 TTL)
-   → 플랫폼별 리다이렉트 (sessionId 포함)
+   → 통일된 콜백 URL로 리다이렉트 (sessionId & new 파라미터)
+   - 웹: /auth/callback?session={sessionId}&new=true/false
+   - 앱: newsbara://auth/callback?session={sessionId}&new=true/false
 
-4. 클라이언트 → POST /api/auth/exchange (sessionId 전달)
-   → AccessToken + RefreshToken 수신
+4. 프론트엔드 → /auth/callback 페이지에서 처리
+   → POST /api/auth/exchange (sessionId 전달)
+   → AccessToken 수신 + RefreshToken (웹: Cookie, 앱: body)
+   → new 파라미터에 따라 라우팅
+     - new=true → /onboarding
+     - new=false → /home
 
 5. 클라이언트 → 토큰 저장
-   - 웹: LocalStorage 또는 Memory
+   - 웹: AccessToken은 LocalStorage/Memory, RefreshToken은 HttpOnly Cookie (자동)
    - 앱: Secure Storage (Keychain/KeyStore)
 
 6. 신규 사용자 → 온보딩 → POST /api/auth/onboarding
@@ -236,10 +242,12 @@ GET /oauth2/callback/{provider}
 | code | string | O | OAuth 인증 코드 |
 | state | string | X | 플랫폼 구분 |
 
-**응답**: 플랫폼별 리다이렉트
-- 웹: `https://newsbara.com/onboarding?session={sessionId}` (신규 사용자)
-- 웹: `https://newsbara.com/home?session={sessionId}` (기존 사용자)
-- 앱: `newsbara://auth/callback?session={sessionId}`
+**응답**: 플랫폼별 리다이렉트 (통일된 callback URL)
+- 웹: `https://newsbara.com/auth/callback?session={sessionId}&new=true` (신규 사용자)
+- 웹: `https://newsbara.com/auth/callback?session={sessionId}&new=false` (기존 사용자)
+- 앱: `newsbara://auth/callback?session={sessionId}&new=true`
+
+**참고**: 프론트엔드에서 `/auth/callback` 페이지에서 토큰 교환 후 `new` 파라미터에 따라 `/onboarding` 또는 `/home`으로 라우팅합니다.
 
 #### 1.3. 세션 교환 (토큰 발급)
 
@@ -265,12 +273,13 @@ POST /api/auth/exchange
 {
   "success": true,
   "data": {
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "accessToken": "eyJhbGciOiJIUzUxMiJ9...",
+    "refreshToken": null,
     "tokenType": "Bearer",
     "expiresIn": 3600,
     "isNewUser": true,
     "userInfo": {
+      "userId": 1,
       "email": "user@example.com",
       "name": "홍길동",
       "profileImageUrl": "https://example.com/profile.jpg"
@@ -279,6 +288,21 @@ POST /api/auth/exchange
   "timestamp": "2026-01-12T19:00:00+09:00"
 }
 ```
+
+**Set-Cookie 헤더** (웹 플랫폼만)
+```
+Set-Cookie: refreshToken=eyJhbGciOiJIUzUxMiJ9...;
+            Expires=Sun, 01 Feb 2026 08:16:47 GMT;
+            Max-Age=604800;
+            Path=/;
+            Secure;
+            HttpOnly;
+            SameSite=Strict
+```
+
+**플랫폼별 처리**:
+- **웹**: `refreshToken`은 응답 body에서 `null`, HttpOnly Cookie로 설정
+- **앱**: `refreshToken`이 응답 body에 포함됨
 
 **에러**
 
@@ -296,30 +320,55 @@ POST /api/auth/refresh
 
 **인증**: 불필요 (Refresh Token 필요)
 
-**요청 본문**
+**요청**:
+- **웹**: Cookie에서 자동으로 `refreshToken` 추출 (요청 body 불필요)
+- **앱**: Header `X-Refresh-Token` 또는 요청 body에 `refreshToken` 포함
+
+**요청 본문** (앱만 해당)
 
 ```json
 {
-  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9..."
 }
 ```
 
-**응답**
+**응답** (웹)
 
 ```json
 {
   "success": true,
   "data": {
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "accessToken": "eyJhbGciOiJIUzUxMiJ9...",
+    "refreshToken": "eyJhbGciOiJIUzUxMiJ9...",
     "tokenType": "Bearer",
-    "expiresIn": 3600
+    "expiresIn": 3600,
+    "isNewUser": false,
+    "userInfo": {
+      "userId": 1,
+      "email": "user@example.com",
+      "name": "홍길동",
+      "profileImageUrl": "https://example.com/profile.jpg"
+    }
   },
   "timestamp": "2026-01-12T19:00:00+09:00"
 }
 ```
 
-**참고**: Refresh Token Rotation이 적용되어 매번 새로운 Refresh Token이 발급됩니다.
+**Set-Cookie 헤더** (웹 플랫폼 - Rotation된 새 토큰)
+```
+Set-Cookie: refreshToken=eyJhbGciOiJIUzUxMiJ9...[NEW_TOKEN];
+            Expires=Sun, 01 Feb 2026 08:17:24 GMT;
+            Max-Age=604800;
+            Path=/;
+            Secure;
+            HttpOnly;
+            SameSite=Strict
+```
+
+**참고**: 
+- Refresh Token Rotation (RTR) 적용 - 매번 새로운 Refresh Token 발급
+- 이전 Refresh Token은 즉시 무효화됨
+- 웹의 경우 Cookie가 자동으로 업데이트됨
 
 **에러**
 
@@ -387,11 +436,15 @@ POST /api/auth/logout
 
 **인증**: 필요
 
-**요청 본문**
+**요청**:
+- **웹**: Cookie에서 자동으로 `refreshToken` 추출 (요청 body 불필요)
+- **앱**: Header `X-Refresh-Token` 또는 요청 body에 `refreshToken` 포함
+
+**요청 본문** (앱만 해당)
 
 ```json
 {
-  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  "refreshToken": "eyJhbGciOiJIUzUxMiJ9..."
 }
 ```
 

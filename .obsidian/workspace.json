@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cc6aa9125269a750",
+        "id": "2a5ed85f8132376e",
         "type": "tabs",
         "children": [
           {
-            "id": "0e6b7b2d22247aaf",
+            "id": "4fa43979d3fb461a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -179,7 +179,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,16 +195,25 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0e6b7b2d22247aaf",
+  "active": "4fa43979d3fb461a",
   "lastOpenFiles": [
     "정처기/시나공1회.md",
-    "정처기/1과목.md",
+    "sellingmate/stream vs kafka.md",
+    "sellingmate/무제",
+    "sellingmate",
+    "was 구현/1-Flow Chart.md",
+    "was 구현/implementation_plan.md",
+    "newsbara/newsbara.md",
+    "was 구현",
     "newsbara/API 명세서.md",
+    "newsbara/키워드 뉴스 썸네일 처리 Flow.md",
+    "정처기/1과목.md",
+    "무제.canvas",
+    "newsbara/security/OAuth 2.0 Flow.md",
+    "newsbara/security",
     "_assets/Pasted image 20260117145800.png",
     "_assets/Pasted image 20260117145217.png",
     "_assets/Pasted image 20260117145110.png",
-    "newsbara/키워드 뉴스 썸네일 처리 Flow.md",
-    "newsbara/newsbara.md",
     "About Obsidian.md",
     "README.md",
     "_assets/Pasted image 20260117153100.png",
@@ -230,17 +240,10 @@
     "java/GC/메모리-구조.md",
     "java/자료구조/자료구조.md",
     "java/GC/GC-모니터링.md",
-    "java/GC/GC-알고리즘/CMS-GC.md",
-    "java/GC/GC-알고리즘/Serial-GC.md",
-    "java/GC/GC-알고리즘/Parallel-GC.md",
     "newsbara/키워드기반 뉴스",
     "newsbara/DB",
     "newsbara/문제점",
     "_assets",
-    "java/GC/GC-알고리즘",
-    "java/GC/GC - 04 알고리즘(Mark/Sweep",
-    "java/GC/GC - 04 알고리즘(Mark",
-    "java/GC/GC - 03 GC 동작(STW",
     "JAVA Canvas.canvas",
     "newsbara/Trouble Shooting.canvas"
   ]
